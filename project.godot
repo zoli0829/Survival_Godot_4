@@ -13,6 +13,8 @@ config_version=5
 config/name="2D Survivor"
 config/version="0.1"
 run/main_scene="res://Scenes/ui/main_menu.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="SamuraiSurvivor"
 config/features=PackedStringArray("4.2", "Forward Plus")
 run/max_fps=60
 config/icon="res://icon.svg"
@@ -22,6 +24,7 @@ config/icon="res://icon.svg"
 GameEvents="*res://Scenes/autoload/game_events.tscn"
 MusicPlayer="*res://Scenes/autoload/music_player.tscn"
 ScreenTransition="*res://Scenes/autoload/screen_transition.tscn"
+MetaProgression="*res://Scenes/autoload/meta_progression.tscn"
 
 [debug]
 
