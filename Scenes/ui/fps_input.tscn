@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://c52vnrenipqo6"]
+
+[ext_resource type="Script" path="res://Scenes/ui/FPSMeter.gd" id="1_ahs6s"]
+
+[node name="FPSCounter" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CommandCanvas" type="CanvasLayer" parent="."]
+
+[node name="FPSMeter" type="Label" parent="CommandCanvas"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 25.0
+theme_type_variation = &"BlueOutlineLabel"
+text = "FPS: 60"
+script = ExtResource("1_ahs6s")
