@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var panel_container = $%PanelContainer
 
+var is_scene_reloading = false
 
 func _ready():
 	panel_container.pivot_offset = panel_container.size / 2

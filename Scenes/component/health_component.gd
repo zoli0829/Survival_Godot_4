@@ -34,4 +34,5 @@ func get_health_percent():
 func check_death():
 	if current_health == 0:
 		died.emit()
+		EnemyCounterSingleton.on_enemy_died()
 		owner.queue_free()

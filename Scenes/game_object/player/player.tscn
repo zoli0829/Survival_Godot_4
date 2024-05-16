@@ -130,7 +130,6 @@ max_speed = 90
 acceleration = 25.0
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_ihfen")]
-max_health = 1000.0
 
 [node name="HitRandomStreamPlayer" parent="." instance=ExtResource("4_8vkwr")]
 streams = Array[AudioStream]([ExtResource("5_gutj2"), ExtResource("6_ncdvp"), ExtResource("7_ohn4s"), ExtResource("8_a4rpk"), ExtResource("9_fgb8m")])

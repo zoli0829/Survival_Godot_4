@@ -1,5 +1,7 @@
 extends Node
 
+signal enemy_spawned
+
 # half of 640 + 55(our window resolution) so they spawn outside of our view
 const SPAWN_RADIUS = 375
 
@@ -51,10 +53,15 @@ func on_timer_timeout():
 	var player = get_tree().get_first_node_in_group("player") as Node2D
 	if player == null:
 		return
-	
+		
+	if EnemyCounterSingleton.enemy_count > 450:
+		return
+		
 	for i in number_to_spawn:
 		var enemy_scene = enemy_table.pick_item()
 		var enemy = enemy_scene.instantiate() as Node2D
+		#enemy_spawned.emit()
+		EnemyCounterSingleton.on_enemy_spawned()
 		
 		var entities_layer = get_tree().get_first_node_in_group("entities_layer")
 		entities_layer.add_child(enemy)
@@ -74,3 +81,4 @@ func on_arena_difficulty_increased(arena_difficulty: int):
 	# every 30 seconds interval because 6x5s = 30s
 	if (arena_difficulty % 6) == 0:
 		number_to_spawn += 1
+

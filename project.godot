@@ -30,6 +30,7 @@ GameEvents="*res://Scenes/autoload/game_events.tscn"
 MusicPlayer="*res://Scenes/autoload/music_player.tscn"
 ScreenTransition="*res://Scenes/autoload/screen_transition.tscn"
 MetaProgression="*res://Scenes/autoload/meta_progression.tscn"
+EnemyCounterSingleton="*res://Scripts/enemy_counter_singleton.gd"
 
 [debug]
 

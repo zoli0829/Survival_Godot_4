@@ -20,7 +20,10 @@ func transition():
 func transition_to_scene(scene_path: String):
 	transition()
 	await transitioned_halfway
+	# to avoid the data tree is null error
+	await get_tree().create_timer(0.3).timeout
 	get_tree().change_scene_to_file(scene_path)
+	EnemyCounterSingleton.enemy_count = 0
 
 
 func emit_transitioned_halfway():
